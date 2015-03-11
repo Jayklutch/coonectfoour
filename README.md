@@ -3,8 +3,8 @@ Family fun game, digital style
 Let's PLAY!
 
 MVP:
-Basic Board
-Piece in coloumn
+Basic Board /n
+Piece in coloumn /n
 Red and black tokens
 Cant be placed in full coloumn
 notified of win/draw
