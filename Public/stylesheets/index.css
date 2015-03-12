@@ -10,10 +10,10 @@ table {
   border: 2px solid blue;
 }
 
-.c4_board td.p1 {
+.c4_board td.yellow {
   background-color: yellow;
 }
 
-.c4_board td.p2 {
+.c4_board td.red {
   background-color: red;
 }
