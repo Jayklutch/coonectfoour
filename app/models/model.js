@@ -1,11 +1,5 @@
 function Model(){
 
-  var Player function(name,number) {
-  this.name = name;
-  this.number = number;
-  this.has_won = false;
-  }
-
   var board = [
               [0,0,0,0,0,0,0],
               [0,0,0,0,0,0,0],
