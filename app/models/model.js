@@ -25,8 +25,9 @@ function Model(){
             if (board[i][num] === 0)
             {
               board[i][num] = player;
-              break;
+              return i + 1; //REM to change
             }
+            
         }
     }
 
