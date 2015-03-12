@@ -1,5 +1,5 @@
 function View() {
-
+  
   this.placePiece = function(player,row,column) {
     cell = $( 'tr:nth-child('+row+') td:nth-child('+column+')' );
     if (player == 1) {
@@ -9,7 +9,7 @@ function View() {
       $(cell).removeClass('red');
       $(cell).addClass('yellow');
     }
-  }
+  };
 
   this.displayActivePlayer = function(player){
     if (player == 1){
@@ -17,7 +17,7 @@ function View() {
     } else {
       $('div#statusBanner').text("YELLOW's Turn");
     }
-  }
+  };
 
   this.displayWin = function(player){
     if (player == 1){
@@ -25,10 +25,10 @@ function View() {
     } else {
       $('div#statusBanner').text("YELLOW won!");
     }
-  }
+  };
 
   this.displayDraw = function(){
     $('div#statusBanner').text("It's a draw!");
-  }
+  };
 
 }
