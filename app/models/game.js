@@ -24,9 +24,10 @@ Game.prototype.drop = function (colNum, playerNum) {
 Game.prototype.checkWinner = function () {
   for (var i = 0; i < this.players.length; i++) {
     if (this.players[i].has_won === true) {
-      return this.players[i].name + " has won!";
+      return true;
     }
   }
+  return false;
 };
 
 Game.prototype.check = function (player) {
