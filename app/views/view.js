@@ -3,16 +3,32 @@ function View() {
   this.placePiece = function(player,row,column) {
     cell = $( 'tr:nth-child('+row+') td:nth-child('+column+')' );
     if (player == 1) {
+      $(cell).removeClass('yellow');
       $(cell).addClass('red');
     } else {
+      $(cell).removeClass('red');
       $(cell).addClass('yellow');
     }
   }
 
-//  this.displayWhosTurn
+  this.displayActivePlayer = function(player){
+    if (player == 1){
+      $('div#statusBanner').text("RED's Turn");
+    } else {
+      $('div#statusBanner').text("YELLOW's Turn");
+    }
+  }
 
-//  this.reload/clearScreen (on new game (new game button for html))
+  this.displayWin = function(player){
+    if (player == 1){
+      $('div#statusBanner').text("RED won!");
+    } else {
+      $('div#statusBanner').text("YELLOW won!");
+    }
+  }
 
-//  this.displayWinLossDraw
+  this.displayDraw = function(){
+    $('div#statusBanner').text("It's a draw!");
+  }
 
 }

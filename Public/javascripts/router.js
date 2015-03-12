@@ -5,7 +5,7 @@ $(document).ready(function() {
       controller.play();
     }
   });
-  $('body').on('click', 'td', function(e) {
-    controller.columnClicked($(this).attr("class"));
+  $('body').on('click', 'td', function() {
+    controller.columnClicked($(this).attr("class").substring(0,1));
   });
 });

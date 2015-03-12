@@ -17,3 +17,12 @@ table {
 .c4_board td.red {
   background-color: red;
 }
+
+div#statusBanner {
+  height:40px;
+  width: 338px;
+  border: 2px solid black;
+  color: green;
+  text-align: center;
+  font-size: 250%;
+}
