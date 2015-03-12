@@ -1,0 +1,19 @@
+table {
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.c4_board td {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border: 2px solid blue;
+}
+
+.c4_board td.yellow {
+  background-color: yellow;
+}
+
+.c4_board td.red {
+  background-color: red;
+}

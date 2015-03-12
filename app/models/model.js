@@ -1,41 +1,35 @@
 function Model(){
 
   function player(name,number){
-  this.name = name;
-  this.number = number;
-  this.has_won = false;
-} //player
+    this.name = name;
+    this.number = number;
+    this.has_won = false;
+  } //player
 
   player1 = new player('GreenLantern', 1);
   player2 = new player('Hulk', 2);
 
-
   var board = [
     [0,0,0,0,0,0,0],
-    [0,2,2,2,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,1,1,1,1,0],
-    [0,0,0,0,0,0,0]
+    [0,0,2,2,2,2,0],
+    [0,0,1,0,0,0,0],
+    [0,0,1,0,0,0,0],
+    [0,0,1,0,0,0,0],
+    [0,0,1,0,0,0,0]
   ];
 
-function drop(num, player){
-  for (var i = 5; i >= 0; i--)
-  {
-    if (board[i][num] === 0)
+  this.drop=function(num, player){
+    for (var i = 5; i >= 0; i--)
     {
-      board[i][num] = player;
-      break;
+      if (board[i][num] === 0)
+      {
+        board[i][num] = player;
+      var update = i+1
+      return update
+        break;
+      }
     }
   }
-
-}
-
-
-console.log(board);
-
-
-console.log(board);
 
   function check(player){
     var RowCount = 0
@@ -56,12 +50,33 @@ console.log(board);
       console.log(player1.has_won, player2.has_won);
     }
 
+    var ColCount = 0
+    for (var j = 0; j < 7; j++) {
+      for (var i = 0; i < 6; i++) {
+        if (board[i][j] === player){
+          ColCount++;
+          console.log("coloumn count",ColCount);
+        }
+          else {
+            ColCount = 0;
+          }
+        if(ColCount === 4){
+          if(player===1){player1.has_won = true;}
+          else {player2.has_won = true;}
+      }
+    }
+      console.log(player1.has_won, player2.has_won);
+    }
+
+
+
 
 
 
   } //check
 check(1);
+check(2);
 
-} //model
 x = new Model();
 // x.drop(1,2)
+}
