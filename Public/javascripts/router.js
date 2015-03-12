@@ -6,7 +6,7 @@ $(document).ready(function() {
     }
   });
   $('body').on('click', 'td', function(e) {
-    controller.columnClicked($(this).attr("class"));
+    controller.columnClicked($(this).attr("class").substring(0,1));
   });
 
 });
