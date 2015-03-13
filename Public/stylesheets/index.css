@@ -17,13 +17,13 @@ table {
 .c4_board td.yellow {
   background-color: black;
  background-size: 120px 120px;
- background-image: url("iron.png");
+ background-image: url("hulk.png");
 }
 
 .c4_board td.red {
  background-color: black;
 background-size: 120px 120px;
-background-image: url("hulk.png");
+background-image: url("iron.png");
 }
 
 div#statusBanner {

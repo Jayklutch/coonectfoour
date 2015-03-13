@@ -45,6 +45,26 @@ Game.prototype.check = function (player) {
       this.updateScore(cellValue, player);
     }
   }
+  // check front diagonal
+  var ii = 0;
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 7; j++) {
+      ii = i-j;
+      if (ii < 0) { ii += 6; }
+      var cellValue = this.board[ii][j];
+      this.updateScore(cellValue, player);
+    }
+  }
+  // check back diagonal
+  var ii = 0;
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 7; j++) {
+      ii = i+j;
+      if (ii > 5) { ii -= 6; }
+      var cellValue = this.board[ii][j];
+      this.updateScore(cellValue, player);
+    }
+  }
 };
 
 Game.prototype.updateScore = function (cellValue, player) {
