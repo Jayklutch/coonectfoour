@@ -6,21 +6,24 @@ table {
 }
 
 .c4_board td {
-  background-color: white;
+   background-color: white;
   height: 120px;
   width: 120px;
+  background-size: 120px 120px;
   border: 2px solid blue;
   border-radius: 50%;
 }
 
 .c4_board td.yellow {
- /* background-color: yellow; */
-background-image: url ('/stylesheets/hulk.png');
+  background-color: black;
+ background-size: 120px 120px;
+ background-image: url("iron.png");
 }
 
 .c4_board td.red {
-/*  background-color: red; */
-background-image: url ('/stylesheets/iron.png');
+ background-color: black;
+background-size: 120px 120px;
+background-image: url("hulk.png");
 }
 
 div#statusBanner {
