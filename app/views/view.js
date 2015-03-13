@@ -12,20 +12,22 @@ function View() {
   };
 
   this.displayActivePlayer = function(player){
-    if (player == 1){
-      $('div#statusBanner').text("RED's Turn");
-    } else {
-      $('div#statusBanner').text("YELLOW's Turn");
-    }
+    $('div#statusBanner').text(player+"'s turn!");
+    // if (player == 1){
+    //   $('div#statusBanner').text("RED's Turn");
+    // } else {
+    //   $('div#statusBanner').text("YELLOW's Turn");
+    // }
   };
 
   this.displayWin = function(player){
-    if (player == 1){
-      $('div#statusBanner').text("RED won!");
-    } else {
-      $('div#statusBanner').text("YELLOW won!");
-    }
-  };
+    $('div#statusBanner').text(player+" has WON!");
+  //   if (player == 1){
+  //     $('div#statusBanner').text("RED won!");
+  //   } else {
+  //     $('div#statusBanner').text("YELLOW won!");
+  //   }
+   };
 
   this.displayDraw = function(){
     $('div#statusBanner').text("It's a draw!");
