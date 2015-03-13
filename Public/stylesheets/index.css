@@ -15,12 +15,12 @@ table {
 
 .c4_board td.yellow {
  /* background-color: yellow; */
-background-image: url ('hulk.png');
+background-image: url ('/stylesheets/hulk.png');
 }
 
 .c4_board td.red {
 /*  background-color: red; */
-background-image: url ('iron.png');
+background-image: url ('/stylesheets/iron.png');
 }
 
 div#statusBanner {
