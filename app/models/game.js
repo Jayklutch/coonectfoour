@@ -34,15 +34,15 @@ Game.prototype.check = function (player) {
   // check rows
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 7; j++) {
-      var cellValue = board[j][i];
-      updateScore(cellValue, player.number);
+      var cellValue = this.board[i][j];
+      this.updateScore(cellValue, player);
     }
   }
   // check cols
   for (var i = 0; i < 7; i++) {
     for (var j = 0; j < 6; j++) {
-      var cellValue = board[j][i];
-      updateScore(cellValue, player);
+      var cellValue = this.board[j][i];
+      this.updateScore(cellValue, player);
     }
   }
 };

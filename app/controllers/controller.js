@@ -3,7 +3,7 @@ function Controller() {
   this.player1 = new Player('GreenLantern', 1);
   this.player2 = new Player('Hulk', 2);
   this.game = new Game([this.player1, this.player2]);
-  this.player = this.player1;
+  this.currentPlayer = this.player1;
 }
 
 Controller.prototype.bindEvents = function () {
@@ -16,17 +16,17 @@ Controller.prototype.bindEvents = function () {
 
 Controller.prototype.columnClicked = function (colNum) {
   // move player stuff when turn = 1
-  var row = this.game.drop(colNum, player.number);
-  this.view.placePiece(player, row, colNum);
-  this.game.check(player);
-  if (this.game.checkWinner()) { this.view.displayWin(player.name);}
+  var row = this.game.drop(colNum-1, this.currentPlayer.number);
+  this.view.placePiece(this.currentPlayer.number, row, colNum);
+  this.game.check(this.currentPlayer);
+  if (this.game.checkWinner()) { this.view.displayWin(this.currentPlayer.name);}
   else {
     //this.turn = 3 - this.turn;
-      if (player.name === this.player1.name) {
-        player = this.player2;
+      if (this.currentPlayer.number === this.player1.number) {
+        this.currentPlayer = this.player2;
       } else {
-        player = this.player1;
+        this.currentPlayer = this.player1;
       }
-    this.view.displayActivePlayer(player.name);
+    this.view.displayActivePlayer(this.currentPlayer.name);
   }
 };
