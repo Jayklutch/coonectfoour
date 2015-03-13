@@ -8,6 +8,6 @@ function Player(name, number) {
 Player.prototype.checkWin = function (){
   //If the count has reached 4 someone has won!
   if(this.score === 4){
-    player.has_won = true;
+    this.has_won = true;
   }
 };
