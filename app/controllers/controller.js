@@ -1,6 +1,6 @@
 function Controller() {
   this.view = new View();
-  this.player1 = new Player('GreenLantern', 1);
+  this.player1 = new Player('Iron Man', 1);
   this.player2 = new Player('Hulk', 2);
   this.game = new Game([this.player1, this.player2]);
   this.currentPlayer = this.player1;
