@@ -9,6 +9,9 @@ function Controller() {
 
 Controller.prototype.bindEvents = function () {
   var self = this;
+  $('#newgame').on ('click',  function(){
+    window.location.reload()
+  });
   $('body').on('click', 'td', function () {
     // this is a html body object
     self.columnClicked($(this).attr("class").substring(0, 1));
