@@ -34,7 +34,7 @@ Game.prototype.check = function (player) {
   // check rows
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 7; j++) {
-      if (j===0){this.updateScore(0,player)};
+      if (j===0){this.updateScore(0,player);}
 
       var cellValue = this.board[i][j];
       this.updateScore(cellValue, player);
@@ -42,7 +42,7 @@ Game.prototype.check = function (player) {
   }
   // check cols
   for (var i = 0; i < 7; i++) {
-    if (j===0){this.updateScore(0,player)};
+    if (i===6){this.updateScore(0,player);}
     for (var j = 0; j < 6; j++) {
       var cellValue = this.board[j][i];
       this.updateScore(cellValue, player);
